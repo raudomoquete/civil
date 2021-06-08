@@ -1,0 +1,106 @@
+﻿@model civil.Web.Models.FormViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Editar Formulario</h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Incident" class="control-label"></label>
+                <input asp-for="Incident" class="form-control" />
+                <span asp-validation-for="Incident" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Province" class="control-label"></label>
+                <input asp-for="Province" class="form-control" />
+                <span asp-validation-for="Province" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Longitude" class="control-label"></label>
+                <input asp-for="Longitude" class="form-control" />
+                <span asp-validation-for="Longitude" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Latitude" class="control-label"></label>
+                <input asp-for="Latitude" class="form-control" />
+                <span asp-validation-for="Latitude" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-4">
+                @if (!string.IsNullOrEmpty(Model.ImageUrl))
+                {
+                    <img src="@Url.Content(Model.ImageUrl)" alt="Image" style="width:400px;height:400px;max-width:100%; height:auto;" />
+                }
+            </div>
+
+            <div class="form-group">
+                <label asp-for="AffectedPeople" class="control-label"></label>
+                <input asp-for="AffectedPeople" class="form-control" />
+                <span asp-validation-for="AffectedPeople" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="AffectedHomes" class="control-label"></label>
+                <input asp-for="AffectedHomes" class="form-control" />
+                <span asp-validation-for="AffectedHomes" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Deceased" class="control-label"></label>
+                <input asp-for="Deceased" class="form-control" />
+                <span asp-validation-for="Deceased" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Observation" class="control-label"></label>
+                <input asp-for="Observation" class="form-control" />
+                <span asp-validation-for="Observation" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Informant" class="control-label"></label>
+                <input asp-for="Informant" class="form-control" />
+                <span asp-validation-for="Informant" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Operator" class="control-label"></label>
+                <input asp-for="Operator" class="form-control" />
+                <span asp-validation-for="Operator" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-dark">Volver</a>
+</div>
+

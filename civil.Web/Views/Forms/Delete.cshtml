@@ -1,0 +1,47 @@
+﻿@model civil.Web.Data.Entities.Form
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Borrar</h2>
+
+<h3>Esta seguro que quiere borrar esto?</h3>
+<div>
+    <h4>Form</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Incident)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Incident)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Observation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Observation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Informant)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Informant)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Operator)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Operator)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-dark">Volver</a>
+    </form>
+</div>

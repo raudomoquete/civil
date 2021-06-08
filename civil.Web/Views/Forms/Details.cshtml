@@ -1,0 +1,122 @@
+﻿@model civil.Web.Data.Entities.Form
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Detalles del Formulario</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Incident)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Incident)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Province)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Province)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Longitude)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Longitude)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Latitude)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Latitude)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AffectedPeople)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AffectedPeople)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AffectedHomes)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AffectedHomes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Deceased)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Deceased)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Observation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Observation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Informant)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Informant)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Operator)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Operator)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdatedAt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UpdatedAt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedAt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreatedAt)
+        </dd>
+    </dl>
+
+    <div class="col-md-4">
+        @if (!string.IsNullOrEmpty(Model.ImageUrl))
+        {
+            <img src="@Url.Content(Model.ImageUrl)" alt="Image" style="width:300px;height:300px;max-height: 100%; width: auto;" />
+        }
+    </div>
+</div>
+
+<div class="form-check-group">
+    <input type="submit" value="Details" class="btn btn-info" />
+    <a asp-action="Index" class="btn btn-dark">Volver</a> 
+</div>
